@@ -18,16 +18,11 @@ app.set("view engine", "ejs");
 // static files
 app.use(express.static("public"));
 
+// middleware
 app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   res.locals.path = req.path;
   next();
-});
-
-// middleware
-app.use((req, res, next) => {
-//   console.log("host :", req.hostname);
-  next(); // to move the control to the next step
 });
 
 app.get("/", (req, res) => {

@@ -18,7 +18,7 @@ const blog_details = (req, res) => {
       res.render("details", { blog: result, title: "Blog Details" });
     })
     .catch((err) => {
-      console.log(err);
+      console.log("Eroor", err);
       res.render("404", { title: "Blog not found" });
     });
 };

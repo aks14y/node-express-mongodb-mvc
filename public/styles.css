@@ -1,75 +1,82 @@
-body{
-    margin: 0 auto;
-    width: 550px;
+body {
+  margin: 0 auto;
+  width: 750px;
 }
-p,h3{
-    margin: 0;
+p,
+h3 {
+  margin: 0;
 }
-.title{
-    padding: 20px;
-    text-align: center;
-    color: crimson;
+.title {
+  padding: 20px;
+  text-align: center;
+  color: crimson;
 }
-.input-block{
-    margin-bottom: 10px;
-    color: grey;
+.input-block {
+  margin-bottom: 10px;
+  color: grey;
 }
-.input-block input, .input-block textarea{
-    margin-top: 10px;
-    width: 100%;
+.input-block input,
+.input-block textarea {
+  margin-top: 10px;
+  width: 100%;
 }
-/* .submit-btn{
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-    background-color: crimson;
-    color:  white;
-    padding: 8px;
-    border: white;
-} */
-.blog-container{
-    padding: 15px 50px;
-    border: 2px solid grey;
-    margin-bottom: 7px;
-    border-radius: 5px;
+.blog-container {
+  padding: 15px 50px;
+  border: 2px solid grey;
+  margin-bottom: 7px;
+  border-radius: 5px;
 }
-.blog-container h3{
-    color: rgb(37, 35, 35);
+.blog-container h3 {
+  color: rgb(37, 35, 35);
 }
-.blog-container p:first-of-type{
-    margin-top: 5px;
-    color: grey;
+.blog-container p:first-of-type {
+  margin-top: 5px;
+  color: grey;
 }
-.read-more-link{
-    text-decoration: none;
-    color: crimson;
+.read-more-link {
+  text-decoration: none;
+  color: crimson;
 }
-.no-blogs{
-    text-align: left;
+.no-blogs {
+  text-align: left;
 }
-.no-blogs p:first-of-type{
-    color: grey;
+.no-blogs p:first-of-type {
+  color: grey;
 }
-.create-btn, .back-btn, .delete-btn, .submit-btn{
-    background-color: crimson;
-    color: white;
-    border-radius: 7px;
-    border: 1px solid crimson;
-    margin-bottom: 20px;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-left: auto;
-    display: block;
+.btn {
+  background-color: crimson;
+  color: white;
+  border-radius: 7px;
+  border: 1px solid crimson;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: auto;
+  display: block;
 }
-.back-btn{
-    margin-right: auto;
-    margin-left: 0;
+.back-btn {
+  margin-right: auto;
+  margin-left: 0;
 }
-.create-btn a, .back-btn a, .delete-btn a{
-    text-decoration: none;
-    color: white;
+.center-btn {
+  margin-right: auto;
 }
-.blog-head{
-    display: flex;
-    align-items: baseline;
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+.blog-head {
+  display: flex;
+  align-items: baseline;
+}
+.not-found-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.center-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
