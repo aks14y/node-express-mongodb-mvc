@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="blogs-wrapper">
+      <h1 class="title">--- Blogs ---</h1>
+      <button class="create-btn"><a href="/blogs/create">Create</a></button>
+      <% if(blogs.length > 0) { %> <% blogs.forEach((blog) => { %>
+      <div class="blog-container">
+        <h3><%= blog.title %></h3>
+        <p><%= blog.snippet %></p>
+        <a class="read-more-link" href="/blogs/<%= blog._id %>">Read more...</a>
+      </div>
+      <% }) %> <%} else{ %>
+      <div class="no-blogs">
+        <h3>There are no new blogs to show!</h3>
+        <p>Create a new one ?</p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

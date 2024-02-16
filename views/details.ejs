@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Blog Details</h1>
+    <%- include("./partials/nav.ejs") %>
+    <div class="blog-container">
+      <div class="blog-head">
+        <h3><%= blog.title %></h3>
+        <button class="delete-btn" data-doc="<%= blog._id %>"><a href="/blogs">Delete</a></button>
+      </div>
+      <p><%= blog.snippet %></p>
+      <p><%= blog.content %></p>
+    </div>
+    <script>
+        const trashcan = document.querySelector('button.delete-btn');
+    
+        trashcan.addEventListener('click', (e) => {
+          const endpoint = `/blogs/${trashcan.dataset.doc}`;
+    
+          fetch(endpoint, {
+            method: 'DELETE',
+          })
+          .then(response => response.json())
+          .then(data => window.location.href = data.redirect)
+          .catch(err => console.log(err));
+        });
+        
+      </script>
+  </body>
+</html>
