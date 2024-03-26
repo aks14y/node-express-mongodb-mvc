@@ -5,7 +5,7 @@ const blogRoutes = require("./routes/blogRoutes");
 
 // connect to mongodb
 const dbURI =
-  "mongodb+srv://akshay4362847:Akshay123@nodebeginner.wh5tq21.mongodb.net/node-beginner?retryWrites=true&w=majority";
+  "mongodb+srv://akshay4362847:<password>@nodebeginner.wh5tq21.mongodb.net/node-beginner?retryWrites=true&w=majority";
 
 mongoose
   .connect(dbURI)
